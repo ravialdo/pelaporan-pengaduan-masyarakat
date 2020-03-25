@@ -15,7 +15,7 @@
 					
 					<div class="form-group">
 						<label>Bulan</label>
-						<select class="form-control" name="bulan">
+						<select class="form-control" name="bulan" required>
 							<option value="">Pilih Bulan</option>
 							<option value="1">Januari</option>
 							<option value="2">Februari</option>
@@ -34,7 +34,7 @@
 					
 					<div class="form-group">
 						<label>Tahun</label>
-						<input type="years" class="form-control" name="tahun">
+						<input type="years" class="form-control" name="tahun" required>
 						<div class="text-small">
 							Tahun minimal harus 4 digit
 						</div>
