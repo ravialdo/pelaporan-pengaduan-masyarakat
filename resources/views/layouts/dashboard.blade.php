@@ -118,7 +118,7 @@
 			
 			<li class="@yield('dashboard')">
                  <a class="nav-link active" href="{{ url('dashboard') }}">
-                    <i class="fas fa-dashboard"></i> <span>Dashboard</span>
+                    <i class="fab fa-dyalog"></i> <span>Dashboard</span>
                   </a>
               </li>
 		     @if(session('level') == 'admin')

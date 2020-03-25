@@ -7,7 +7,7 @@
 			<div class="card-body">
 			
 				<x-alert type="warning">
-					Pilih tanggal yang ingin kamu buatkan laporannya, berdasarkan dari tanggal berapa dan sampai tanggal berapa
+					Pilih bulan dan tahun yang ingin kamu buat laporannya!
 				</x-alert>
 				
 				<form method="post" action="{{ route('laporan.generate') }}">
@@ -36,7 +36,7 @@
 						<label>Tahun</label>
 						<input type="years" class="form-control" name="tahun" required>
 						<div class="text-small">
-							Tahun minimal harus 4 digit
+							Tahun minimal dan maksimal harus 4 digit
 						</div>
 					</div>
 					

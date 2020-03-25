@@ -19,6 +19,9 @@
           </div>
 
           <div class="section-body">
+
+			<x-card-home/>
+			
           </div>
         </section>
       </div>
