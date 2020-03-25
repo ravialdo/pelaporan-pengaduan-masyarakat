@@ -151,19 +151,5 @@ class PengaduanController extends Controller
          
          return back();
     }
-
-     public function selesai($id){
-	 	$state = Pengaduan::find($id)->update([
-			'status' => 'selesai',
-		]);
-		
-		if($state){
-				Alert::success('Berhasil!', 'Data pengaduan berhasil di selesaikan');
-			}else{
-				Alert::error('Terjadi kesalahan!', 'Data pengaduan gagal di selesaikan');
-			}
-			
-		return back();
-	 }
 	
 }

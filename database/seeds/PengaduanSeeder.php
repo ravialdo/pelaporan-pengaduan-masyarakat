@@ -15,7 +15,7 @@ class PengaduanSeeder extends Seeder
             'tanggal_pengaduan' => now(),
             'nik' => '2002266768686478',
             'isi_laporan' => 'Telah Terjadi kebakaran!',
-            'foto' => 'gambar.jpg',
+            'foto' => 'example-img.jpg',
             'status' => '0',
             'created_at' => now(),
             'updated_at' => now()

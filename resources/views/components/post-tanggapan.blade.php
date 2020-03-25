@@ -32,7 +32,7 @@
 					@else
 						<i class="fas fa-user-tie"></i> {{ $row->petugas->username }}
 					@endif
-				     <span class="float-right">{{ $row->tanggal_tanggapan->format('d M Y H:i') }}</span>
+				     <span class="float-right">{{ $row->created_at->format('d M Y H:i') }}</span>
 				</b>
 				<div class="text-dark">{{ $row->tanggapan }}</div>
 												

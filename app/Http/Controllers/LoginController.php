@@ -96,7 +96,7 @@ class LoginController extends Controller
 	}
    
     public function showLogin(){     
-         if(Session::get('nik') == true){
+         if(Session::get('level') == true){
              return redirect('dashboard');
          }
          
@@ -104,6 +104,11 @@ class LoginController extends Controller
    }
    
     public function successLogin(){
+	
+	  if(Session::get('level') == false){
+             return redirect('/login');
+         }
+
        return view('dashboard.index');
     }
    

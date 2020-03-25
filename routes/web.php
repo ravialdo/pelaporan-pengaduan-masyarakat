@@ -51,7 +51,7 @@ Route::get('/dashboard/veeifikasi/tolak', 'VerifikasiController@showTolak')->nam
 Route::post('/dashboard/verifikasi/tolak/search', 'VerifikasiController@searchTolak')->name('search.tolak');
 Route::get('/dashboard/verifikasi/tolak/{id}/pulihkan', 'VerifikasiController@pulih')->name('pulih.tolak');
 
-Route::get('/dashboard/pengaduan/{id}/selesai', 'PengaduanController@selesai')->name('pengaduan.selesai');
+Route::get('/dashboard/pengaduan/{id}/selesai', 'VerifikasiController@selesai')->name('pengaduan.selesai');
 
 Route::get('/dashboard/verifikasi/view/validasi', 'VerifikasiController@show')->name('validation.show');
 Route::get('/dashboard/verifikasi/{id}/validasi', 'VerifikasiController@validation')->name('pengaduan.validation');

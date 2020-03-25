@@ -5,7 +5,7 @@
 				<h4>Edit Tanggapan</h4>
 			</div>
 			<div class="card-body">
-				<form method="post" action="{{ route('tanggapan.update', $tanggapan->id) }}">
+				<form method="post" action="{{ $tanggapan->id_petugas != null || session('level') == 'admin' ? route('tanggapan.update', $tanggapan->id) : route('riwayat.update', $tanggapan->id) }}">
 				
 					@method('put')
 					@csrf

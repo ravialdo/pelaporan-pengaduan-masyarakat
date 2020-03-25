@@ -23,7 +23,7 @@ class CardHome extends Component
         $this->masyarakat = Masyarakat::all()->count();
         $this->petugas = Petugas::where('level', 'petugas')->count();
 	   $this->admin = Petugas::where('level', 'admin')->count();
-	   $this->pengaduan = Petugas::all()->count();
+	   $this->pengaduan = Pengaduan::all()->count();
     }
 
     /**

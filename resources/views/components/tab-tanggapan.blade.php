@@ -40,9 +40,11 @@
       <a href="{{ route('tanggapan.show', $row->id) }}" class="btn btn-primary">
            <i class="fas fa-comment"></i>  Tanggapan
       </a>
+	@if($row->status != 'selesai')
 	<a href="{{ route('pengaduan.selesai', $row->id) }}" class="btn btn-success float-right">
 		<li class="fas fa-clipboard-check"></li> Selesai
 	</a>
+	@endif
    </div>
 </div>
 

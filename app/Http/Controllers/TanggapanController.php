@@ -26,7 +26,9 @@ class TanggapanController extends Controller
     {
         $data = [
            'tanggapan' => Tanggapan::orderBy('id', 'desc')->paginate(10),
-           'pengaduan' => Pengaduan::where('status', '!=', '0')->orderBy('id', 'desc')->paginate(10)
+           'pengaduan' => Pengaduan::where([
+			['status', '!=', '0'], ['status', '!=', 'tolak']
+		  ])->orderBy('id', 'desc')->paginate(10)
         ];
       
         return view('dashboard.tanggapan.index', $data);
@@ -75,10 +77,10 @@ class TanggapanController extends Controller
 		 	Alert::error('Terjadi kesalahan!', 'Pengaduan tidak ditemukan');
 			return back();
 		 }
-		if($state->status == 'proses' && $state->verifikasi != null){
+		if($state->status == 'proses' || $state->status == 'selesai' && $state->verifikasi != null){
 			  $data = [
            		 'pengaduan' => $state,
-				 'tanggapan' => Tanggapan::where('id_pengaduan', $id)->orderBy('id', 'desc')->get()
+				 'tanggapan' => Tanggapan::where('id_pengaduan', $id)->orderBy('id', 'asc')->get()
          		   ];
 			}else{
 				Alert::error('Terjadi kesalahan!', 'Pengaduan tidak ditemukan');
@@ -143,4 +145,5 @@ class TanggapanController extends Controller
 			
 		return back();
     }
+
 }

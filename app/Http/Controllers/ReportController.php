@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pengaduan;
+use Alert;
 use PDF;
 
 class ReportController extends Controller
@@ -19,6 +20,15 @@ class ReportController extends Controller
 	}
 	
 	 public function generate(Request $req){
+		
+		$exist = Pengaduan::whereMonth('tanggal_pengaduan', $req->bulan)
+				->whereYear('tanggal_pengaduan', $req->tahun)
+				->exists();
+				
+		if($exist == false){
+				Alert::error('Terjadi kesalahan!', 'Data tidak ditemukan!');
+				return back();
+			}
 		
 		$data = [
 			'pengaduan' => Pengaduan::whereMonth('tanggal_pengaduan', $req->bulan)

@@ -71,7 +71,7 @@
                   </div>
 				
                   <div class="dropdown-item-desc">
-				 {{ $key->petugas->nama }} <br>
+				Tanggapan masuk dari <span class="text-capitalize">{{ $key->petugas->nama }}</span> <br>
 				  {{ $key->tanggapan }}
                     <div class="time">{{ $key->created_at->diffForHumans() }}</div>
                   </div>

@@ -32,6 +32,24 @@
 					<span class="float-right">{{ $row->tanggal_tanggapan->format('d M Y H:i') }}</span>
 				</b>
 				<div class="text-dark">{{ $row->tanggapan }}</div>
+				
+				@if($row->id_masyarakat != null)
+					
+				<a href="{{ route('riwayat.edit', $row->id) }}" class="btn btn-primary float-right ml-1 my-1">
+					<i class="fas fa-edit"></i>
+				</a>
+				
+				<form method="post" action="{{ route('riwayat.destroy', $row->id) }}" id="destroy{{ $row->id }}" class="text-right my-1">
+				
+					@method('delete')
+					@csrf
+					
+					<button type="button" class="btn btn-danger" onclick="destroy({{ $row->id }})">
+						<i class="fas fa-trash"></i>
+					</button>
+				</form>
+			
+				@endif
 																
 			</div>
 			@endforeach

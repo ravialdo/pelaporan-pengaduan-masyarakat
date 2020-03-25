@@ -14,7 +14,7 @@
 	    </div>		
 	</div>
 	<div class="col-md-3">
-		<div class="card card-primary">
+		<div class="card card-success">
 	
 			<div class="card-wrap">
                	<div class="card-header">
@@ -28,7 +28,7 @@
 	     </div>		
 	</div>
 	<div class="col-md-3">
-		<div class="card card-primary">
+		<div class="card card-info">
 		
 			<div class="card-wrap">
                	<div class="card-header">
@@ -42,7 +42,7 @@
 	       </div>
 	</div>
 	<div class="col-md-3">
-		<div class="card card-primary">
+		<div class="card card-warning">
 		
 			<div class="card-wrap">
                	<div class="card-header">

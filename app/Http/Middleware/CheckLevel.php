@@ -16,6 +16,7 @@ class CheckLevel
      */
     public function handle($request, Closure $next, $privilege)
     {
+	
 	   if($privilege == Session::get('level')){
         	  return $next($request);
 	   }
