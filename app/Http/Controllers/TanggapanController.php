@@ -52,8 +52,14 @@ class TanggapanController extends Controller
      */
     public function store(Request $req)
     {
+          $req->validate([
+                'tanggapan' => 'required'
+          ],[
+                'required' => 'ketikan sesuatu..'
+          ]);
+          
         $pengaduan = Pengaduan::find($req->id);
-
+        
 	   $state = $pengaduan->tanggapan()->create([
 			'tanggal_tanggapan' => now(),
 			'tanggapan' => $req->tanggapan,

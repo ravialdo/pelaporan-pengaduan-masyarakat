@@ -44,6 +44,14 @@ class LaporkanPengaduanController extends Controller
      */
     public function store(Request $req)
     {
+      $req->validate([
+            'isi_laporan' => 'required|max:100',
+            'foto' => 'required|mimes:png,jpeg,jpg'
+      ],[
+            'required' => ':attribute tidak boleh kosong',
+            'foto.required' => 'tidak ada :attribute yang dipilih',
+            'mimes' => 'format :attribute harus berupa png,jpg,jpeg'
+      ]);
       
       $file = $req->file('foto');
       $file_name = time(). '-' .$file->getClientOriginalName();

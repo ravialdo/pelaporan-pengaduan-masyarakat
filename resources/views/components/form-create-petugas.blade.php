@@ -18,7 +18,12 @@
                               <i class="fas fa-user"></i>
                            </div>
                         </div>
-                     <input type="text" name="nama" class="form-control" value="{{ old('nama') }}">
+                     <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}">
+                     @error('nama')
+                     <div class="invalid-feedback">
+                           {{ $message }}
+                     </div>
+                     @enderror
                   </div>
                </div>
                   
@@ -30,7 +35,12 @@
                               <i class="fas fa-user-tie"></i>
                           </div>
                        </div>
-                    <input type="text" name="username" class="form-control" value="{{ old('username') }}">
+                    <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}">
+                    @error('username')
+                    <div class="invalid-feedback">
+                          {{ $message }}
+                    </div>
+                    @enderror
                  </div>
               </div>
                         
@@ -42,7 +52,12 @@
                           <i class="fas fa-lock"></i>
                        </div>
                     </div>
-                  <input type="password" name="password" class="form-control" value="{{ old('password') }}">
+                  <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}">
+                  @error('password')
+                  <div class="invalid-feedback">
+                        {{ $message }}
+                  </div>
+                  @enderror
               </div>
            </div>
                   
@@ -54,7 +69,12 @@
                           <i class="fas fa-phone"></i>
                        </div>
                     </div>
-                 <input type="number" name="telepon" class="form-control" value="{{ old('telepon') }}">
+                 <input type="number" name="telepon" class="form-control @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}">
+                 @error('telepon')
+                 <div class="invalid-feedback">
+                       {{ $message }}
+                 </div>
+                 @enderror
               </div>
            </div>                                         
                   
@@ -66,11 +86,16 @@
                        <i class="fas fa-user-shield"></i>
                      </div>
                   </div>
-                  <select name="level" class="custom-select">
+                  <select name="level" class="custom-select @error('level') is-invalid @enderror">
                   <option value="">Silahkan Pilih</option>
                   <option value="admin">Admin</option>
                   <option value="petugas">Petugas</option>
                </select>
+               @error('level')
+               <div class="invalid-feedback">
+                     {{ $message }}
+               </div>
+               @enderror
             </div>
          </div>
                   

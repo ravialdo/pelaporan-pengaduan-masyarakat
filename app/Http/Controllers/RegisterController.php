@@ -17,15 +17,16 @@ class RegisterController extends Controller
          'numeric' => ':attribute harus berupa angka',
          'string' => ':attribute harus berupa huruf',
          'min' => ':attribute minimal harus :min karakter',
-         'max' => ':attribute maksimal harus :max karakter'
+         'max' => ':attribute maksimal harus :max karakter',
+         'unique' => ':attribute ini sudah digunakan'
       ];
       
       $req->validate([
          'nik' => 'required|numeric|min:16',
          'nama' => 'required|string|max:25',
-         'username' => 'required|string|max:25',
+         'username' => 'required|unique:masyarakat|string|max:25',
          'password' => 'required|min:8',
-         'telepon' => 'required|min:11|max:12'
+         'telepon' => 'required|unique:masyarakat|min:11|max:12'
       ], $message);
       
       $state = Masyarakat::create([
