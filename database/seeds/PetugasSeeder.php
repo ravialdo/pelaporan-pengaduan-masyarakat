@@ -15,7 +15,7 @@ class PetugasSeeder extends Seeder
         DB::table('petugas')->insert([
            'nama' => 'admin',
            'username' => 'admin',
-           'password' => Hash::make('admin'),
+           'password' => Hash::make('admin123'),
            'telepon' => '082765875379',
            'level' => 'admin',
            'created_at' => now(),
@@ -25,7 +25,7 @@ class PetugasSeeder extends Seeder
         DB::table('petugas')->insert([
            'nama' => 'petugas',
            'username' => 'petugas',
-           'password' => Hash::make('petugas'),
+           'password' => Hash::make('petugas123'),
            'telepon' => '089476376964',
            'level' => 'petugas',
            'created_at' => now(),

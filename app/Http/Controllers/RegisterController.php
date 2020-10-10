@@ -22,9 +22,9 @@ class RegisterController extends Controller
       ];
       
       $req->validate([
-         'nik' => 'required|numeric|min:16',
+         'nik' => 'required|unique:masyarakat|min:16|max:16',
          'nama' => 'required|string|max:25',
-         'username' => 'required|unique:masyarakat|string|max:25',
+         'username' => 'required|unique:masyarakat|string|max:10',
          'password' => 'required|min:8',
          'telepon' => 'required|unique:masyarakat|min:11|max:12'
       ], $message);

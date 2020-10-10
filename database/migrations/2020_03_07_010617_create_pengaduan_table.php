@@ -17,7 +17,10 @@ class CreatePengaduanTable extends Migration
             $table->id();
             $table->datetime('tanggal_pengaduan');
             $table->char('nik', 16);
-            $table->foreign('nik')->references('nik')->on('masyarakat');
+            $table->foreign('nik')
+            ->references('nik')
+            ->on('masyarakat')
+            ->onDelete('cascade');
             $table->text('isi_laporan');
             $table->enum('status', ['0', 'proses', 'selesai', 'tolak']);
             $table->string('foto', 255);

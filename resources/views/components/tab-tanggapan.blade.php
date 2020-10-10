@@ -4,7 +4,7 @@
 
 <div class="card">
   <div class="card-header">
-     <h4>Pengaduan</h4> <span class="badge badge-{{ $row->status == 'proses' ? 'primary' : 'success' }} ml-auto">{{ $row->status == 'proses' ? 'Sedang di Proses' : 'Selesai' }}</span>
+     <h4>Pengaduan</h4> <span class="badge badge-{{ $row->status == 'proses' ? 'primary' : 'success' }} ml-auto">{{ $row->status == 'proses' ? 'sedang di proses' : 'selesai' }}</span>
   </div>
   <div class="card-body">
     <ul class="nav nav-pills" id="myTab3" role="tablist">

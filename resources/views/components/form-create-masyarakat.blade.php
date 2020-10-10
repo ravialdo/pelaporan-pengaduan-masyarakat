@@ -86,7 +86,7 @@
                                                       <i class="fas fa-phone"></i>
                                                 </div>
                                           </div>
-                                          <input type="text" name="telepon" class="form-control @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}">
+                                          <input type="number" name="telepon" class="form-control @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}">
                                           @error('telepon')
                                           <div class="invalid-feedback">
                                                 {{ $message }}

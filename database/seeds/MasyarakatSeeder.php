@@ -16,7 +16,7 @@ class MasyarakatSeeder extends Seeder
             'nik' => '2002266768686478',
             'nama' => 'John Doe',
             'username' => 'John',
-            'password' => Hash::make('john'),
+            'password' => Hash::make('john1234'),
             'telepon' => '087689564864',
             'created_at' => now(),
            'updated_at' => now()

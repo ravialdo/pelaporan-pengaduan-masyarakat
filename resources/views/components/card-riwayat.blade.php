@@ -42,7 +42,7 @@
 <div class="card">
   <div class="card-header">
      <h4>Pengaduan</h4> <span class="badge badge-{{ $row->status == '0' ? 'warning' : '' }}{{ $row->status == 'proses' ? 'primary' : ''}}{{ $row->status == 'selesai' ? 'success' : '' }}{{ $row->status == 'tolak' ? 'danger' : '' }} ml-auto">
-		{{ $row->status == 'proses' ? 'Sedang di Proses' : '' }} {{ $row->status == '0' ? 'Menunggu' : '' }} {{ $row->status == 'selesai' ? 'Selesai' : '' }} {{ $row->status == 'tolak' ? 'Ditolak' : '' }}
+		{{ $row->status == 'proses' ? 'sedang di proses' : '' }} {{ $row->status == '0' ? 'menunggu' : '' }} {{ $row->status == 'selesai' ? 'selesai' : '' }} {{ $row->status == 'tolak' ? 'diitolak' : '' }}
 	</span>
   </div>
   <div class="card-body">

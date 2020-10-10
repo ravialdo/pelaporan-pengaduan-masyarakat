@@ -82,7 +82,7 @@
                              <i class="fa fa-lock"></i>
                          </div>
                         </div>
-                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" required>                                          
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" required>                                          
                          @error('password')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
@@ -125,7 +125,7 @@
               Sudah punya akun? <a href="{{ url('login')  }}">Login</a>
             </div>
             <div class="simple-footer">
-               Backend by <a href="https://github.com/ravialdo/">Ravialdo Imanda Putra</a>
+               Backend by <a href="https://ravialdo.github.io/">Ravialdo Imanda Putra</a>
             </div>
           </div>
         </div>

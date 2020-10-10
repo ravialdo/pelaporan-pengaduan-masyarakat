@@ -70,7 +70,7 @@
                            <a href="{{ url('dashboard/petugas/'. $row->id .'/edit') }}" class="btn btn-primary my-1">
                              <i class="fa fa-edit"></i>
                            </a>
-                                                           
+                           @if(session()->get('username') != $row->username)
                           <form method="post" action="{{ url('dashboard/petugas', $row->id) }}" id="destroy{{ $row->id }}">
                               
                                @method('delete')
@@ -81,7 +81,7 @@
                               </button>
                               
                           </form>
-                              
+                          @endif
                       </td>
                    </tr>
                         

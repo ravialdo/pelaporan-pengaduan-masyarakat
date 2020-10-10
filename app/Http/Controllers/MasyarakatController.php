@@ -62,9 +62,9 @@ class MasyarakatController extends Controller
       */
       public function store(Request $req) {
             $req->validate([
-                  'nik' => 'required|min:12|max:12',
+                  'nik' => 'required|unique:masyarakat|min:16|max:16',
                   'nama' => 'required|max:30',
-                  'username' => 'required|unique:masyarakat|max:30',
+                  'username' => 'required|unique:masyarakat|min:10',
                   'password' => 'required|min:8',
                   'telepon' => 'required|unique:masyarakat|max:12'
             ], [
@@ -140,9 +140,9 @@ class MasyarakatController extends Controller
       public function update(Request $req, $id) {
             
             $req->validate([
-                  'nik' => 'required|min:12|max:12',
+                  'nik' => "required|unique:masyarakat,nik,$id|min:16|max:16",
                   'nama' => 'required|max:30',
-                  'username' => "required|unique:masyarakat,username,$id|max:30",
+                  'username' => "required|unique:masyarakat,username,$id|min:10",
                   'password' => 'nullable|min:8',
                   'telepon' => "required|unique:masyarakat,telepon,$id|max:12"
             ], [
