@@ -35,6 +35,7 @@ class RegisterController extends Controller
          'username' => $req->username,
          'password' => Hash::make($req->password),
          'telepon' => $req->telepon,
+         'level' => 'masyarakat'
       ]);
       
       if($state){

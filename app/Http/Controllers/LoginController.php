@@ -18,13 +18,13 @@ class LoginController extends Controller
             $req->validate([
                   'username' => 'required|exists:masyarakat|max:30',
                   'password' => 'required|min:8'
-            ],[
+            ], [
                   'required' => ':attribute ini tidak boleh kosong',
                   'exists' => ':attribute ini tidak terdaftar',
                   'min' => ':attribute ini minimal harus :min karakter',
                   'max' => ':attribute ini maksimal harus :max karakter'
             ]);
-            
+
             $username = $req->username;
 
             if (Masyarakat::where('username', $username)->exists()) {
@@ -44,6 +44,7 @@ class LoginController extends Controller
                               Session::put('username', $data->username);
                               Session::put('password', $data->password);
                               Session::put('telepon', $data->telepon);
+                              Session::put('level', $data->level);
 
                         }
 
@@ -61,17 +62,17 @@ class LoginController extends Controller
       }
 
       public function petugas(Request $req) {
-            
+
             $req->validate([
                   'username' => 'required|exists:petugas|max:30',
                   'password' => 'required|min:8'
-            ],[
+            ], [
                   'required' => ':attribute ini tidak boleh kosong',
                   'exists' => ':attribute ini tidak terdaftar',
                   'min' => ':attribute ini minimal harus :min karakter',
                   'max' => ':attribute ini maksimal harus :max karakter'
             ]);
-            
+
             $username = $req->username;
 
             if (Petugas::where('username', $username)->exists()) {
@@ -106,7 +107,7 @@ class LoginController extends Controller
             }
 
       }
-      
+
       public function loginPetugas() {
             if (Session::get('level') == true) {
                   return redirect('dashboard');
@@ -116,11 +117,9 @@ class LoginController extends Controller
       }
 
       public function showLogin() {
-            if (Session::get('nik') == true) {
-                  return redirect('dashboard');
+            if (Session::get('level') == true) {
+                  return redirect()->route('login');
             }
-
-            return view('auth.auth-login');
       }
 
       public function successLogin() {
