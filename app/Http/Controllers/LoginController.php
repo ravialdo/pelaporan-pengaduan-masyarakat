@@ -106,6 +106,22 @@ class LoginController extends Controller
             }
 
       }
+      
+      public function loginPetugas() {
+            if (Session::get('level') == true) {
+                  return redirect('dashboard');
+            }
+
+            return view('auth.auth-login-petugas');
+      }
+
+      public function showLogin() {
+            if (Session::get('nik') == true) {
+                  return redirect('dashboard');
+            }
+
+            return view('auth.auth-login');
+      }
 
       public function successLogin() {
 
