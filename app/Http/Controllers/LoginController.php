@@ -44,7 +44,6 @@ class LoginController extends Controller
                               Session::put('username', $data->username);
                               Session::put('password', $data->password);
                               Session::put('telepon', $data->telepon);
-                              Session::put('level', $data->level);
 
                         }
 
@@ -106,22 +105,6 @@ class LoginController extends Controller
                   return back();
             }
 
-      }
-
-      public function loginPetugas() {
-            if (Session::get('level') == true) {
-                  return redirect('dashboard');
-            }
-
-            return view('auth.auth-login-petugas');
-      }
-
-      public function showLogin() {
-            if (Session::get('level') == true) {
-                  return redirect('dashboard');
-            }
-
-            return view('auth.auth-login');
       }
 
       public function successLogin() {
