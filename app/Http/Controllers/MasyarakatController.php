@@ -64,7 +64,7 @@ class MasyarakatController extends Controller
             $req->validate([
                   'nik' => 'required|unique:masyarakat|min:16|max:16',
                   'nama' => 'required|max:30',
-                  'username' => 'required|unique:masyarakat|min:10',
+                  'username' => 'required|unique:masyarakat|max:10',
                   'password' => 'required|min:8',
                   'telepon' => 'required|unique:masyarakat|max:12'
             ], [
@@ -142,7 +142,7 @@ class MasyarakatController extends Controller
             $req->validate([
                   'nik' => "required|unique:masyarakat,nik,$id|min:16|max:16",
                   'nama' => 'required|max:30',
-                  'username' => "required|unique:masyarakat,username,$id|min:10",
+                  'username' => "required|unique:masyarakat,username,$id|max:10",
                   'password' => 'nullable|min:8',
                   'telepon' => "required|unique:masyarakat,telepon,$id|max:12"
             ], [
