@@ -25,7 +25,7 @@
                              <i class="fa fa-key"></i>
                          </div>
                         </div>
-                        <input type="number" name="nik" class="form-control @error('nik') is-invalid @enderror" value="{{ old('nik') }}" required autofocus>
+                        <input type="number" name="nik" class="form-control @error('nik') is-invalid @enderror" value="{{ old('nik') }}"autofocus>
                         @error('nik')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
@@ -44,7 +44,7 @@
                              <i class="fa fa-user"></i>
                          </div>
                         </div>
-                        <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}" required>                                          
+                        <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}">                                          
                          @error('nama')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
@@ -63,7 +63,7 @@
                              <i class="fa fa-user"></i>
                          </div>
                         </div>
-                        <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}" required>                                          
+                        <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}">                                          
                          @error('username')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
@@ -82,7 +82,7 @@
                              <i class="fa fa-lock"></i>
                          </div>
                         </div>
-                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" required>                                          
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}">                                          
                          @error('password')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
@@ -101,7 +101,7 @@
                              <i class="fa fa-phone"></i>
                          </div>
                         </div>
-                        <input type="number" name="telepon" class="form-control @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}" required>                                          
+                        <input type="number" name="telepon" class="form-control @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}">                                          
                          @error('telepon')                                     
                             <div class="invalid-feedback">
                                  {{ $message }}
