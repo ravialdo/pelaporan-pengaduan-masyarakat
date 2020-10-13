@@ -63,7 +63,7 @@ class PetugasController extends Controller
       public function store(Request $req) {
             $req->validate([
                   'nama' => 'required|max:30',
-                  'username' => 'required|unique:petugas|ma:10',
+                  'username' => 'required|unique:petugas|max:10',
                   'password' => 'required|min:8',
                   'telepon' => 'required|unique:petugas|max:12',
                   'level' => 'required'
