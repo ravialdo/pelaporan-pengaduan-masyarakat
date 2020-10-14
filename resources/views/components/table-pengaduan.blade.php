@@ -62,7 +62,7 @@
                        <td>{{ $row->masyarakat->nama }}</td>
                        <td>{{ $row->isi_laporan }}</td>
                        <td class="text-center">
-                           <img src="{{ asset('files/'. $row->foto)}}" class="img-thumbnail m-1" width="130" alt="Gambar tidak ditemukan">
+                           <img src="{{ asset('public/files/'. $row->foto)}}" class="img-thumbnail m-1" width="130" alt="Gambar tidak ditemukan">
                        </td>
                        <td>{{ $row->tanggal_pengaduan }}</td>
                        <td class="text-capitalize">

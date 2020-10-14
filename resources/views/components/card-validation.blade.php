@@ -45,9 +45,9 @@
          </div>
          <div class="card-body">
             <div class="chocolat-parent">
-               <a href="{{ asset('files/'. $row->foto) }}" class="chocolat-image" title="Gambar Pengaduan">
+               <a href="{{ asset('public/files/'. $row->foto) }}" class="chocolat-image" title="Gambar Pengaduan">
                   <div class="text-center">
-                     <img alt="Gambar tidak ditemukan" src="{{ asset('files/'. $row->foto) }}" class="img-fluid img-thumbnail mb-2">                  
+                     <img alt="Gambar tidak ditemukan" src="{{ asset('public/files/'. $row->foto) }}" class="img-fluid img-thumbnail mb-2">                  
                   </div>
                </a>
                <div class="text-muted text-center">

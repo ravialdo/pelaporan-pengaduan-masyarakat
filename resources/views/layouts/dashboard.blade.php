@@ -6,14 +6,14 @@
       <title>Pengaduan Masyarakat - @yield('title_url')</title>
 
       <!-- General CSS Files -->
-      <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
+      <link rel="stylesheet" href="{{ asset('public/bootstrap/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('public/fontawesome/css/all.css') }}">
 
       <!-- CSS Libraries -->
 
       <!-- Template CSS -->
-      <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/components.css') }}">
+      <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+      <link rel="stylesheet" href="{{ asset('public/css/components.css') }}">
 </head>
 
 <body>
@@ -142,7 +142,7 @@
                                                 </div>
                                           </li>
                                           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                                                <img alt="image" src="{{ asset('img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
+                                                <img alt="image" src="{{ asset('public/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
                                                 <div class="d-sm-none d-lg-inline-block">
                                                       Hi, {{ session('nama') }}
                                                 </div>
@@ -242,21 +242,21 @@
                         </div>
 
                         <!-- General JS Scripts -->
-                        <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
-                        <script src="{{ asset('jquery/dist/jquery.min.js') }}"></script>
-                        <script src="{{ asset('popper.js/dist/umd/popper.min.js') }}"></script>
-                        <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-                        <script src="{{ asset('jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
-                        <script src="{{ asset('js/stisla.js') }}"></script>
+                        <script src="{{ asset('publicvendor/sweetalert/sweetalert.all.js') }}"></script>
+                        <script src="{{ asset('public/jquery/dist/jquery.min.js') }}"></script>
+                        <script src="{{ asset('public/popper.js/dist/umd/popper.min.js') }}"></script>
+                        <script src="{{ asset('public/bootstrap/js/bootstrap.min.js') }}"></script>
+                        <script src="{{ asset('public/jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
+                        <script src="{{ asset('public/js/stisla.js') }}"></script>
 
                         <!-- JS Libraies -->
 
                         <!-- Template JS File -->
-                        <script src="{{ asset('js/scripts.js') }}"></script>
-                        <script src="{{ asset('js/custom.js') }}"></script>
+                        <script src="{{ asset('public/js/scripts.js') }}"></script>
+                        <script src="{{ asset('public/js/custom.js') }}"></script>
 
                         <!-- Page Specific JS File -->
-                        <script src="{{ asset('js/page/components-chat-box.js') }}"></script>
+                        <script src="{{ asset('public/js/page/components-chat-box.js') }}"></script>
 
                   </body>
             </html>

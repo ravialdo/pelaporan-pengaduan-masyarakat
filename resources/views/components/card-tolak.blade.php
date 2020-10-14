@@ -55,7 +55,7 @@
   <div class="tab-content" id="myTabContent2">
         <div class="tab-pane fade show active" role="tabpanel" id="laporan{{ $row->id }}" aria-labelledby="home-tab3">
               <div class="chocolat-parent">
-               <a href="{{ asset('files/'. $row->foto) }}" class="chocolat-image" title="Gambar Pengaduan">
+               <a href="{{ asset('publicfiles/'. $row->foto) }}" class="chocolat-image" title="Gambar Pengaduan">
                   <div class="text-center">
                      <img alt="Gambar tidak ditemukan" src="{{ asset('files/'. $row->foto) }}" class="img-fluid img-thumbnail mb-2">                  
                   </div>

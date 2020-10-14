@@ -110,7 +110,7 @@ class LoginController extends Controller
 
       public function loginPetugas() {
             if (Session::get('level') == true) {
-                  return redirect('dashboard');
+                  return redirect('/dashboard');
             }
 
             return view('auth.auth-login-petugas');
@@ -118,14 +118,16 @@ class LoginController extends Controller
 
       public function showLogin() {
             if (Session::get('level') == true) {
-                  return redirect()->route('login');
+                  return redirect('/dashboard');
             }
+            
+            return view('auth.auth-login');
       }
 
       public function successLogin() {
 
             if (Session::get('level') == false) {
-                  return redirect('/login');
+                  return redirect('/logi');
             }
 
             return view('dashboard.index');
