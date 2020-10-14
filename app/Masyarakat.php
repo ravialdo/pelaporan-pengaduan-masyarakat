@@ -11,7 +11,7 @@ class Masyarakat extends Model
     protected $table = 'masyarakat';
    
    protected $fillable = [
-      'nik', 'nama', 'username', 'password', 'telepon'
+      'nik', 'nama', 'username', 'password','level', 'telepon'
    ];
    
     public function pengaduan(){
