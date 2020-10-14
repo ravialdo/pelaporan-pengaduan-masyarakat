@@ -116,8 +116,8 @@ class PengaduanController extends Controller
                'foto' => $new_file_name
             ]);
             
-            File::delete('files/'. $old_file);
-            $new_file->move('files', $new_file_name);
+            File::delete('public/files/'. $old_file);
+            $new_file->move('public/files', $new_file_name);
          
         }
       
@@ -142,7 +142,7 @@ class PengaduanController extends Controller
       
         if($state){
                Pengaduan::find($id)->delete();
-               File::delete('files/'. $state->foto);
+               File::delete('public/files/'. $state->foto);
                
                Alert::success('Berhasil!', 'Data berhasil di hapus');
            }else{

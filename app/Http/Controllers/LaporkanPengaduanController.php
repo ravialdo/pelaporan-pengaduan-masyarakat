@@ -65,7 +65,7 @@ class LaporkanPengaduanController extends Controller
       ]);
       
       if($state){
-            $folder = 'files';
+            $folder = 'public/files';
             $file->move($folder, $file_name);
             
             Alert::success('Berhasil!', 'Pengaduan telah terkirim');
