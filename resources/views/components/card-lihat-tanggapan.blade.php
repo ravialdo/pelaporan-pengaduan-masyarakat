@@ -63,9 +63,9 @@
 			
 			<div class="form-group">
                       <div class="input-group">
-                        <textarea name="tanggapan" class="form-control" placeholder="Ketikan tanggapan anda.." {{ $pengaduan->status == '0' ? 'readonly' : '' || $pengaduan->status == 'tolak' ? 'readonly' : ''}}></textarea>
+                        <textarea name="tanggapan" class="form-control" placeholder="Ketikan tanggapan anda.." @php if($pengaduan->status == 0 || $pengaduan->status == 'tolak') echo 'readonly'; else echo '';  @endphp></textarea>
                         <div class="input-group-append">
-                          <button class="btn btn-primary" type="@php if($pengaduan->level == 0 || $pengaduan->level == 'tolak') echo 'button'; else echo 'submit'; @endphp">
+                          <button class="btn btn-primary" type="@php if($pengaduan->status == 0 || $pengaduan->status == 'tolak') echo 'button'; else echo 'submit'; @endphp">
 						<i class="far fa-paper-plane"></i>
 					</button>
                         </div>
