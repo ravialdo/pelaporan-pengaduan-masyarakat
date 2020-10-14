@@ -17,8 +17,8 @@
 </head>
 
 <body>
-
-      @include('sweetalert::alert')
+      
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
       <div id="app">
             <div class="main-wrapper">
@@ -229,7 +229,8 @@
                                                 </div>
                                           </aside>
                                     </div>
-
+                                    
+                                    
                                     @yield('content')
 
                                     <footer class="main-footer">
@@ -242,7 +243,7 @@
                         </div>
 
                         <!-- General JS Scripts -->
-                        <script src="{{ asset('publicvendor/sweetalert/sweetalert.all.js') }}"></script>
+                        <script src="{{ asset('public/vendor/sweetalert/sweetalert.all.js') }}"></script>
                         <script src="{{ asset('public/jquery/dist/jquery.min.js') }}"></script>
                         <script src="{{ asset('public/popper.js/dist/umd/popper.min.js') }}"></script>
                         <script src="{{ asset('public/bootstrap/js/bootstrap.min.js') }}"></script>
