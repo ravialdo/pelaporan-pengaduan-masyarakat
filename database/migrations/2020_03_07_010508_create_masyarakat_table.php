@@ -19,7 +19,7 @@ class CreateMasyarakatTable extends Migration
                   $table->string('username', 25)->unique();
                   $table->string('password', 255);
                   $table->string('telepon', 13)->unique();
-                  $table->enum('level', ['masyarakat']);
+                  $table->enum('level', ['masyarakat'])->default('masyarakat');
                   $table->timestamps();
             });
       }
