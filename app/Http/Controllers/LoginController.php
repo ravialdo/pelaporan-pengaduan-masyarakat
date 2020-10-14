@@ -127,7 +127,7 @@ class LoginController extends Controller
       public function successLogin() {
 
             if (Session::get('level') == false) {
-                  return redirect('/logi');
+                  return redirect('/login');
             }
 
             return view('dashboard.index');
