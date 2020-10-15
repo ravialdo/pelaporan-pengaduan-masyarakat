@@ -19,7 +19,7 @@ class CreateTanggapanTable extends Migration
                   ->references('id')
                   ->on('pengaduan')
                   ->onDelete('cascade');
-                  $table->timestamp('tanggal_tanggapan');
+                  $table->timestamp('tanggal_tanggapan')->nullable();
                   $table->text('tanggapan');
                   $table->unsignedBigInteger('id_petugas')->nullable();
                   $table->foreign('id_petugas')

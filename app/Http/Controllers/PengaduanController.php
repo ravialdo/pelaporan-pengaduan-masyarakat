@@ -117,7 +117,7 @@ class PengaduanController extends Controller
             ]);
             
             File::delete('public/files/'. $old_file);
-            $new_file->move('public/files', $new_file_name);
+            $new_file->move('public/files/', $new_file_name);
          
         }
       

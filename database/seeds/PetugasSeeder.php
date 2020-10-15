@@ -13,7 +13,7 @@ class PetugasSeeder extends Seeder
     public function run()
     {
         DB::table('petugas')->insert([
-           'nama' => 'admin',
+           'nama' => 'Admin',
            'username' => 'admin',
            'password' => Hash::make('admin123'),
            'telepon' => '082765875379',
@@ -23,7 +23,7 @@ class PetugasSeeder extends Seeder
         ]);
       
         DB::table('petugas')->insert([
-           'nama' => 'petugas',
+           'nama' => 'Petugas',
            'username' => 'petugas',
            'password' => Hash::make('petugas123'),
            'telepon' => '089476376964',
