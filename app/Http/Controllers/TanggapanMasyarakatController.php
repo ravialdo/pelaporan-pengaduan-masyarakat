@@ -55,7 +55,8 @@ class TanggapanMasyarakatController extends Controller
 
 	   $state = $pengaduan->tanggapan()->create([
 			'tanggapan' => $req->tanggapan,
-			'id_masyarakat' => Session::get('id')
+			'id_masyarakat' => Session::get('id'),
+			'tanggal_tanggapan' => now()
 	    ]);
 	
 		return back();
