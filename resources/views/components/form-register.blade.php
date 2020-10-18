@@ -5,6 +5,7 @@
           <div class="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
               <img src="{{ asset('public/img/stisla-light.svg') }}" alt="logo" width="100" class="shadow-light rounded-circle">
+              <div class="pt-3">aplikasi pelaporan pengaduan masyarakat</div>
             </div>
 
             <div class="card card-primary">

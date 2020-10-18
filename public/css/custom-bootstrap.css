@@ -1,0 +1,68 @@
+/* Import Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Varela+Round&family=Montserrat&display=swap');
+
+body {
+      font-family: 'Montserrat', sans-serif;
+}
+/* Navbar Custom */
+.navbar {
+      font-family: 'Balsamiq Sans', cursive;
+}
+
+.navbar-brand {
+      font-weight: bold;
+}
+
+.navbar-brand > span {
+      font-size: 35px;
+}
+
+.border-bottom-gradient {
+      border-bottom: 5px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right,#2c73d2, #7c92dd, #afb4e8, #d9d8f3, #ffffff);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+      outline: none;
+      border: none;
+}
+
+/* Content */
+.section-content {
+      margin-top: 6rem;
+}
+
+h3 {
+      font-family: 'Varela Round', sans-serif;
+}
+
+.btn-radius {
+      border-radius: 25px;
+      padding: 11px;
+}
+
+
+/* Card Style */
+.card {
+      background-color: #f6f6f6;
+      border: 0;
+}
+
+.card:hover {
+      background-color: #2C73D2;
+      color: #fff;
+}
+
+.icon-card {
+      margin-top: -3.5rem;
+      text-align: center;
+      background: #2C73D2;
+      width: 70px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      border-radius: 50px;
+      color:#fff;
+}

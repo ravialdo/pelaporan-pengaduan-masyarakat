@@ -17,8 +17,8 @@
 </head>
 
 <body>
-      
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
+      @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
       <div id="app">
             <div class="main-wrapper">
@@ -58,7 +58,7 @@
                                                             @php
                                                             $tanggapan = \App\Tanggapan::where('id_pengaduan', $notif->id)->orderBy('id', 'desc')->get();
                                                             @endphp
-                                                            
+
 
                                                             @foreach($tanggapan as $key)
 
@@ -85,54 +85,55 @@
                                                             @endif
 
                                                             @endforeach
-                                                            
+
                                                             @endforeach
-                                                            
+
                                                             @if(session()->get('nik'))
-                                                                   <div class="mx-3 text-small border-bottom mt-3">
-                                                                         Pemberitahuan tanggapan laporan anda dari petugas akan tampil disini.
-                                                                   </div>
+                                                            <div class="mx-3 text-small border-bottom mt-3">
+                                                                  Pemberitahuan tanggapan laporan anda dari petugas akan tampil disini.
+                                                            </div>
                                                             @endif
-                                                      
+
 
                                                             @endif
-                                                            
+
                                                             @if(session()->get('level') == 'petugas' || session()->get('level') == 'admin')
-                                                            
+
                                                             @php
                                                             $pengaduan = \App\Pengaduan::where('status', '0')->orderBy('id', 'desc')->get();
                                                             @endphp
-                                                            
+
                                                             @foreach($pengaduan as $key)
-                                                                  <a class="dropdown-item" href="{{ route('verification.index') }}">
-                                                                        <div class="dropdown-item-icon bg-info text-white">
-                                                                              <i class="fas fa-bell"></i>
-                                                                        </div>
-                                                                        <div class="dropdown-item-desc">
-                                                                              <div class="text-primary mt-2">
-                                                                                    Laporan masuk dari <span class="text-capitalize">
-                                                                                          @php
-                                                                                               $masyarakat = \App\Masyarakat::where('nik', $key->nik)->get('username');
-                                                                                          @endphp
-                                                                                          @foreach($masyarakat as $user)
-                                                                                                {{ $user->username }}
-                                                                                          @endforeach
-                                                                                    </span>
-                                                                              </div> <br/>
-                                                                              {{ $key->isi_laporan }}
-                                                                              <div class="time">
-                                                                                    {{ $key->created_at->diffForHumans() }}
-                                                                              </div>
-                                                                        </div>
-                                                                  </a>
-                                                            @endforeach
-                                                            
-                                                             @if(session()->get('level'))
-                                                                  <div class="text-small border-bottom mx-3 mt-3">
-                                                                        Pemberitahuan laporan pengaduan data masuk akan tampil disini.
+                                                            <a class="dropdown-item" href="{{ route('verification.index') }}">
+                                                                  <div class="dropdown-item-icon bg-info text-white">
+                                                                        <i class="fas fa-bell"></i>
                                                                   </div>
-                                                             @endif
-                                                            
+                                                                  <div class="dropdown-item-desc">
+                                                                        <div class="text-primary mt-2">
+                                                                              Laporan masuk dari <span class="text-capitalize">
+                                                                                    @php
+                                                                                    $masyarakat = \App\Masyarakat::where('nik', $key->nik)->get('username');
+                                                                                    @endphp
+                                                                                    @foreach($masyarakat as $user)
+                                                                                    {{ $user->username }}
+                                                                                    @endforeach
+                                                                              </span>
+                                                                        </div>
+                                                                        <br />
+                                                                        {{ $key->isi_laporan }}
+                                                                        <div class="time">
+                                                                              {{ $key->created_at->diffForHumans() }}
+                                                                        </div>
+                                                                  </div>
+                                                            </a>
+                                                            @endforeach
+
+                                                            @if(session()->get('level'))
+                                                            <div class="text-small border-bottom mx-3 mt-3">
+                                                                  Pemberitahuan laporan pengaduan data masuk akan tampil disini.
+                                                            </div>
+                                                            @endif
+
                                                             @endif
 
                                                       </div>
@@ -229,8 +230,8 @@
                                                 </div>
                                           </aside>
                                     </div>
-                                    
-                                    
+
+
                                     @yield('content')
 
                                     <footer class="main-footer">
