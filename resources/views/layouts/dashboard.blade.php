@@ -259,6 +259,6 @@
 
                         <!-- Page Specific JS File -->
                         <script src="{{ asset('public/js/page/components-chat-box.js') }}"></script>
-
+                        @stack('js')
                   </body>
             </html>
